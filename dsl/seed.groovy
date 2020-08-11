@@ -8,11 +8,7 @@ def createDeploymentJob(jobName) {
     }
         definition {
             cps{
-                
-                    script{
-                    "@lib"
-                    }
-               
+               script(dslFactory.readFileFromWorkspace(remoteFile))
             }
         }
     }
