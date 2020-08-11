@@ -8,11 +8,11 @@ def createDeploymentJob(jobName) {
     }
         definition {
             cps{
-                steps{
+                
                     script{
                     "@lib"
                     }
-                }
+               
             }
         }
     }
