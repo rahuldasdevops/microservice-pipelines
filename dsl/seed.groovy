@@ -1,9 +1,10 @@
 def createDeploymentJob(jobName) {
-    pipelineJob(jobName) {
     folder('non-prod') {
     displayName('non-prod')
     description('non-prod')
-    }
+    
+    pipelineJob(jobName) {
+
     parameters {
         stringParam('APP', '', 'Application name')
         stringParam('EMAIL', 'admin@example.com', 'Associated email')
@@ -17,5 +18,6 @@ def createDeploymentJob(jobName) {
             }
         }
     }
+  }
 }
 createDeploymentJob(jobName)
