@@ -9,9 +9,8 @@ def createDeploymentJob(jobName) {
         definition {
             cps{
                 script{
-                    steps{
-                        @lib_
-                    }
+                    "@lib"
+                    sh([script: 'echo hello'])
                 }
             }
         }
