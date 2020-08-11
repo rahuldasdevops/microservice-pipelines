@@ -7,3 +7,4 @@ def createDeploymentJob(jobName) {
         }
     }
 }
+createDeploymentJob(deployName)
