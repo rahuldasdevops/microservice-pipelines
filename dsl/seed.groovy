@@ -8,7 +8,8 @@ def createDeploymentJob(jobName) {
     }
         definition {
             cps{
-               script(dslFactory.readFileFromWorkspace(remoteFile))
+               script(this.readFileFromWorkspace('project-a-workflow.groovy'))
+               sandbox()
             }
         }
     }
