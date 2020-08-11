@@ -10,7 +10,6 @@ def createDeploymentJob(jobName) {
             cps{
                 script{
                     "@lib"
-                    sh([script: 'echo hello'])
                 }
             }
         }
