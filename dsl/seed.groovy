@@ -1,5 +1,9 @@
 def createDeploymentJob(jobName) {
     pipelineJob(jobName) {
+    folder('non-prod') {
+    displayName('non-prod')
+    description('non-prod')
+    }
     parameters {
         stringParam('APP', '', 'Application name')
         stringParam('EMAIL', 'admin@example.com', 'Associated email')
