@@ -1,6 +1,6 @@
-def createDeploymentJob(jobName) {
+def createDeploymentJob(jobName,desc) {
     pipelineJob(jobName) {
-    description('Seed Job')
+    description(desc)
     disabled()
     authenticationToken('TEST')
     parameters {
