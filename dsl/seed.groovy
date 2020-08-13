@@ -17,4 +17,4 @@ def createDeploymentJob(jobName,desc) {
         }
   }
 }
-createDeploymentJob(jobName)
+createDeploymentJob(jobName,desc)
