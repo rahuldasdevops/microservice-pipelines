@@ -11,7 +11,7 @@ def createDeploymentJob(jobName) {
         definition {
             cps{
                script(this.readFileFromWorkspace('project-a-workflow.groovy'))
-               sandbox(boolean sandbox = true)
+               sandbox()
             }
         }
   }
