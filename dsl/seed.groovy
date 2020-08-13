@@ -2,6 +2,7 @@ def createDeploymentJob(jobName) {
     pipelineJob(jobName) {
     description('Seed Job')
     disabled()
+    authenticationToken('TEST')
     parameters {
         stringParam('APP', '', 'Application name')
         stringParam('EMAIL', 'admin@example.com', 'Associated email')
