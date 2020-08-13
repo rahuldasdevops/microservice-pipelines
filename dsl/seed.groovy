@@ -1,5 +1,6 @@
 def createDeploymentJob(jobName) {
     pipelineJob(jobName) {
+    description('Seed Job')
     disabled()
     parameters {
         stringParam('APP', '', 'Application name')
@@ -10,7 +11,7 @@ def createDeploymentJob(jobName) {
         definition {
             cps{
                script(this.readFileFromWorkspace('project-a-workflow.groovy'))
-               sandbox()
+               sandbox(boolean sandbox = true)
             }
         }
   }
